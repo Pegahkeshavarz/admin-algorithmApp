@@ -5,8 +5,10 @@ algorithmApp.controller('algorithmCtrl', function ($scope, algorithmFactory) {
   });
 
   $scope.addAlgorithm = function(){
-    algorithmFactory.add($scope.new);
-    $scope.new = {};
+    algorithmFactory.add($scope.new, function(data){
+        $scope.new = {};
+    });
+
   }
 
 });

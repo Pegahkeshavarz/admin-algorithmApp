@@ -12,7 +12,7 @@ module.exports = (function(){
         res.json({title: "you have errors", errors: algorithm.errors});
       } else {
         console.log("algorithm added: ", algorithm);
-
+        res.json('added successfully');
       }
     })
   }

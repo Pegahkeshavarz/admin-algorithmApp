@@ -7,8 +7,9 @@ factory.getCategory = function(callback){
 }
 
 factory.add = function(data){
-  $http.post('/add', data).success(function(output){
+  $http.post('/add', data).success(function(output, callback){
     console.log(output);
+    callback(output);
   });
 }
 
