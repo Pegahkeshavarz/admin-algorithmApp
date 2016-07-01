@@ -1,0 +1,38 @@
+
+<div class="container" ng-controller="algorithmCtrl">
+  <h5>Add a name</h5>
+  <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate" ng-model="new.name">
+          <label for="first_name">Name</label>
+  </div>
+  <h5>choose Category</h5>
+  <select class='browser-default' ng-model='new.category'>
+       <option value='' selected disabled>Category</option>
+       <option ng-repeat='category in categories' value='{{category.name}}'>{{category.name}}</option>
+ </select>
+  <div class="row">
+    <div class="c0l-md-6">
+      <h5>Insert Algorithm</h5>
+      <form class="col s12">
+         <div class="input-field col s12">
+           <textarea id="textarea1" class="materialize-textarea" ng-model='new.algorithm'></textarea>
+           <label for="textarea1">algorithm</label>
+         </div>
+     </form>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="c0l-md-6">
+      <h5>Insert Sloution</h5>
+      <form class="col s12">
+         <div class="input-field col s12">
+           <textarea id="textarea1" class="materialize-textarea" ng-model='new.solution'></textarea>
+           <label for="textarea1">Solution</label>
+         </div>
+         <a class="waves-effect waves-light btn" ng-click="addAlgorithm()">Submit</a>
+     </form>
+    </div>
+  </div>
+</div>
