@@ -16,6 +16,6 @@ require('./server/config/mongoose.js');
 
  routes_setter(app);
 
-app.listen(8003, function() {
+app.listen(8001, function() {
   console.log("listening on port 8003");
 })
